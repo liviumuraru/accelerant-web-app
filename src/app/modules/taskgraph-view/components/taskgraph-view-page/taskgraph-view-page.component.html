@@ -1,0 +1,24 @@
+<mat-icon (click)="Return()" style="position: absolute; left: 15px; top: 15px; cursor: pointer; z-index: 500">keyboard_backspace</mat-icon>
+
+<div class="legend-status-color-container">
+    <div class="legend-status-color">
+        <mat-icon style="color: #9b1111">label</mat-icon>
+        <p style="color: #9b1111">Blocked</p>
+    </div>
+    <div class="legend-status-color">
+        <mat-icon style="color: #cc8657">label</mat-icon>
+        <p style="color: #cc8657">Assignable</p>
+    </div>
+    <div class="legend-status-color">
+        <mat-icon style="color: #bfb920">label</mat-icon>
+        <p style="color: #bfb920">In progress</p>
+    </div>
+    <div class="legend-status-color">
+        <mat-icon style="color: #57bf1f">label</mat-icon>
+        <p style="color: #57bf1f">Completed</p>
+    </div>
+</div>
+
+<div style="height: 100%; width: 100%; overflow: auto; overflow-y: hidden">
+    <taskgraph-view [layout]="layout" (select)="nodeChange($event)"></taskgraph-view>
+</div>

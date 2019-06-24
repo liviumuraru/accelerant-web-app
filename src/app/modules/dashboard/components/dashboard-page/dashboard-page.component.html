@@ -1,0 +1,26 @@
+<acc-header class="acc-header"></acc-header>
+<div class='flex-column-container'>
+    <mat-expansion-panel class="recent-activity-container flex-item">
+      <mat-expansion-panel-header>
+          <mat-panel-title class="section-title">Recent Activity</mat-panel-title>
+          <mat-panel-description class="section-description">Here you can view recent activity you should be aware of, such as task status changes, member additions and removals etc.</mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="workspaces-container flex-item">
+      <mat-expansion-panel-header>
+          <mat-panel-title class="section-title">Your workspaces</mat-panel-title>
+          <mat-panel-description class="section-description">Here you can view minimal details regarding the workspaces you are a member of. </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-grid-list cols='8' rowHeight='100px' [gutterSize]="5">
+
+        <mat-grid-tile (click)="OnWorkspaceTileClicked(element)" color='primary'
+          *ngFor="let element of workspaces"
+          [colspan]="1"
+          [rowspan]="1"
+          [style.background]="element.color">
+            {{element.name}}
+        </mat-grid-tile>
+
+      </mat-grid-list>
+    </mat-expansion-panel>
+</div>

@@ -1,0 +1,22 @@
+taskgraph-view {
+    height: 100vh;
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.legend-status-color-container
+{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    z-index: 500;
+
+    .legend-status-color
+    {
+        p {
+            font-size: 0.75em;
+            display: inline-block;
+        }
+    }
+}

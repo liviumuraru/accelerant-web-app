@@ -1,0 +1,5 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.defaultWebAppToDeploy": "/subscriptions/4a21e184-2dfc-4fea-9459-a4554fb270fc/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/accelerant-web-app",
+    "appService.deploySubpath": ""
+}
