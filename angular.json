@@ -31,7 +31,7 @@
               "src/styles.scss",
               "./node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": ["src/scripts/cytoscape.min.js",
+            "scripts": ["node_modules/cyto/cytoscape.min.js",
               "node_modules/dagre/dist/dagre.min.js",
               "node_modules/cytoscape-dagre/cytoscape-dagre.js",
               "node_modules/cytoscape-cxtmenu/cytoscape-cxtmenu.js"]
