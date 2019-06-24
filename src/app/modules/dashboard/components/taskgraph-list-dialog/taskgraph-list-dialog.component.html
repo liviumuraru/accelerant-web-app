@@ -1,0 +1,92 @@
+<div mat-dialog-content>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon class="margin-top-12">person</mat-icon>
+            <p class="margin-left-12">
+              Users
+            </p>
+          </mat-panel-title>
+        </mat-expansion-panel-header>    
+
+        <mat-divider></mat-divider>
+
+        <mat-list>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon class="margin-top-12">add</mat-icon>
+                  <p class="margin-left-12">
+                    Allow a new user?
+                  </p>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-form-field>
+                <input [(ngModel)]="AddUserName" matInput placeholder="Username">
+              </mat-form-field>
+          
+              <mat-action-row>
+                <button class="margin-left-0" mat-button color="primary" (click)="AddUser()">Add</button>
+              </mat-action-row>
+            </mat-expansion-panel>
+
+            <mat-list-item *ngFor="let user of users">
+                <mat-icon>person</mat-icon>
+                <p class="margin-left-12">
+                  {{ user.name.length > 20 ? (user.name | slice:0:25 + '..') : user.name }}
+                </p>
+                <mat-icon *ngIf="CanDeleteUser(user)" (click)="RemoveUser(user)" class="align-right cursor-pointer">clear</mat-icon>
+            </mat-list-item>
+        </mat-list>
+  
+      </mat-expansion-panel>
+    
+      <mat-divider>
+
+      </mat-divider>
+
+  <mat-list>
+    <h3 mat-subheader>Task graphs</h3>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon class="margin-top-12">add</mat-icon>
+          <p class="margin-left-12">
+            Add a new task graph?
+          </p>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+        <input [(ngModel)]="AddTaskGraphName" matInput placeholder="Task graph name identifier">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input [(ngModel)]="AddTaskGraphDescription" matInput placeholder="Enter a description for the new task graph">
+      </mat-form-field>
+  
+      <mat-action-row>
+        <button class="margin-left-0" mat-button color="primary" (click)="AddTaskGraph()">Add</button>
+      </mat-action-row>
+
+    </mat-expansion-panel>
+    <div *ngFor="let taskgraph of taskgraphs">
+      <mat-expansion-panel (click)="OnItemSelect(taskgraph)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon class="margin-top-12">timeline</mat-icon>
+            <p class="margin-left-12">
+              {{ taskgraph.name.length > 20 ? (taskgraph.name | slice:0:25 + '..') : taskgraph.name }}
+            </p>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p class="taskgraph-description"> {{taskgraph.description}} </p>
+        <mat-action-row>
+          <button class="margin-left-0" mat-button color="primary" (click)="OpenTaskGraph(taskgraph)">Open</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </div>
+  </mat-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="Destroy(1)">Close</button>
+</div>

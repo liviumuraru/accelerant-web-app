@@ -1,0 +1,33 @@
+@import '../../../shared/styles/core.scss';
+
+.flex-column-container
+{
+    display: flex;
+    flex-direction: column;
+    
+    .flex-item
+    {
+        border-style: solid;
+        border-radius: 5px;
+        border-width: 2px;
+        margin-bottom: 5px;
+    }
+
+    .section-title
+    {
+        margin-left: 5px;
+        display: inline;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+}
+
+.mat-grid-tile
+{
+    cursor: pointer;
+
+    .mat-figure
+    {
+        padding-right: 30px !important;
+    }
+}
