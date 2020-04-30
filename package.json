@@ -29,7 +29,7 @@
     "cytoscape-dagre": "^2.2.2",
     "dagre": "^0.8.4",
     "hammerjs": "^2.0.8",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-cookie-service": "^2.2.0",
     "ngx-toastr": "^10.0.4",
     "rxjs": "~6.4.0",
