@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
     "@aspnet/signalr": "^1.1.4",
-    "angular": "^1.7.8",
+    "angular": "^1.8.0",
     "cytoscape": "^3.7.3",
     "cytoscape-context-menus": "^3.0.6",
     "cytoscape-cxtmenu": "^3.1.0",
